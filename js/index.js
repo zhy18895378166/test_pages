@@ -2,14 +2,20 @@ alert("hello zhy!!")
 
 const http = require('http');
 
-const server = http.createServer((req, res) => {
-  if (req.method === 'GET') {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('This is a simple HTTP server.\n');
-  }
-});
+/**
+ * 获取GET提交的参数
+ * @return JSON格式
+ * @author Terry
+*/
+function getArgs(){
+    var args = {};
+    var match = null;
+    var search = decodeURIComponent(location.search.substring(1));
+    var reg = /(?:([^&]+)=([^&]+))/g;
+    while((match = reg.exec(search))!==null){
+        args[match[1]] = match[2];
+    }
+    return args;
+}
 
-server.listen(3000, () => {
-  console.log('Server running at http://localhost:3000/');
-  alert('Server running at http')
-});
+alert(getArgs())

@@ -1,4 +1,4 @@
-//alert("hello zhy!!")
+
 
 const http = require('http');
 
@@ -18,4 +18,5 @@ function getArgs(){
     return args;
 }
 
-alert(getArgs())
+alert(getArgs() + "123")
+

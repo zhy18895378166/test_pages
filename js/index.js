@@ -1,6 +1,5 @@
+alert(location.search.substring(1))
 
-
-const http = require('http');
 
 /**
  * 获取GET提交的参数

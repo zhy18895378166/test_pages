@@ -1,4 +1,4 @@
-alert(location.search.substring(1))
+//alert(location.search.substring(1))
 
 
 /**

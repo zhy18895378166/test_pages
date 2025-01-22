@@ -17,5 +17,14 @@ function getArgs(){
     return args;
 }
 
-alert(getArgs() + "123")
+// JavaScript code to return data
+document.addEventListener('DOMContentLoaded', (event) => {
+    const data = {
+        message: "Hello, this is the data returned by JavaScript!",
+        timestamp: new Date().toISOString()
+    };
+
+    // Display the data in the HTML
+    document.getElementById('data').innerText = JSON.stringify(data, null, 2);
+});
 
